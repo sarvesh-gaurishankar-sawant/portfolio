@@ -202,24 +202,6 @@ button {
   background-size: 100% 1px;
 }
 
-.nav-resume-btn {
-  padding: 6px 16px !important;
-  border: 1px solid var(--color-border) !important;
-  border-radius: 4px;
-  transition: border-color var(--duration-fast),
-              color var(--duration-fast),
-              background-color var(--duration-fast) !important;
-  background-image: none !important;
-  background-size: 0 !important;
-}
-
-.nav-resume-btn:hover {
-  border-color: var(--color-accent) !important;
-  color: var(--color-accent) !important;
-  background-color: var(--color-accent-dim) !important;
-  background-size: 0 !important;
-}
-
 .nav-toggle {
   display: none;
   flex-direction: column;
