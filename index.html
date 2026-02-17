@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarvesh Sawant — Software Engineer</title>
+  <meta name="description" content="Software Engineer specializing in Java, Spring Boot, AWS, and cloud-native systems. MS from Northeastern University. AWS Certified Solutions Architect.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sarvesh Sawant — Software Engineer">
+  <meta property="og:description" content="Software Engineer specializing in Java, Spring Boot, AWS, and cloud-native systems.">
+  <meta property="og:url" content="https://sarveshsawant.com">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Noscript fallback -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .hero-line, .hero-name, .hero-tagline, .hero-intro, .hero-scroll {
+        opacity: 1 !important; transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Skip to content -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-monogram">S.S.</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="assets/Sarvesh_Sawant_Resume.pdf" class="nav-resume-btn" download>Resume</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-menu-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="assets/Sarvesh_Sawant_Resume.pdf" download>Resume</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-line" aria-hidden="true"></div>
+        <h1 class="hero-name">Sarvesh Sawant</h1>
+        <p class="hero-tagline">
+          Software Engineer<span class="hero-dot">&middot;</span>AWS Solutions Architect<span class="hero-dot">&middot;</span>MS Northeastern University
+        </p>
+        <p class="hero-intro">
+          I build reliable backend systems and cloud infrastructure. From ICU monitoring dashboards at Philips to credit scoring platforms processing 50K+ daily transactions, I focus on the engineering that people depend on.
+        </p>
+        <div class="hero-scroll" aria-hidden="true">
+          <span class="hero-scroll-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience" id="experience">
+      <div class="section-inner">
+        <h2 class="section-heading reveal">Experience</h2>
+
+        <div class="timeline">
+          <!-- Philips -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">Philips</h3>
+                  <p class="timeline-role">Software Engineer Co-op &middot; Cambridge, USA</p>
+                </div>
+                <span class="timeline-date">Jan 2025 — Aug 2025</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Built GraphQL and REST APIs in <strong>Spring Boot</strong> with <strong>Hibernate</strong> and MySQL for an ICU vital signs dashboard, serving real-time patient data with <em class="metric">95% unit test coverage</em></li>
+                <li>Diagnosed and fixed a <strong>JVM thread leak</strong> via heap dump analysis, <em class="metric">reducing critical defects by 30%</em> and eliminating unplanned service restarts</li>
+                <li>Implemented <strong>Spring Security OAuth 2.0</strong> with <strong>JWT</strong> validation and role-based access for patient data APIs, supporting HIPAA audit requirements</li>
+                <li>Set up test infrastructure using <strong>JUnit, Mockito</strong>, and React Testing Library, raising coverage <em class="metric">from 60% to 95%</em> across services</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- LTIMindtree Senior -->
+          <div class="timeline-item reveal" data-delay="150">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">LTIMindtree</h3>
+                  <p class="timeline-role">Senior Software Engineer &middot; Navi Mumbai, India</p>
+                </div>
+                <span class="timeline-date">Sep 2021 — Mar 2023</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Built a greenfield credit scoring platform with React frontend and 4 <strong>Spring Boot microservices</strong> on EKS, processing <em class="metric">50K+ daily</em> transactions</li>
+                <li>Designed high-availability layer using <strong>Spring Cloud Gateway</strong> and <strong>Resilience4j</strong> circuit breakers, achieving <em class="metric">99.9% uptime</em></li>
+                <li>Replaced manual refreshes with <strong>Kafka</strong> event streaming and <strong>WebSocket</strong> push, delivering live credit score updates <em class="metric">in under 1s</em></li>
+                <li>Extended <strong>CI/CD pipeline</strong> in Jenkins with <strong>Docker</strong>, SonarQube gates, and ECR pushes for <em class="metric">zero-downtime rollouts</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- LTIMindtree -->
+          <div class="timeline-item reveal" data-delay="300">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">LTIMindtree</h3>
+                  <p class="timeline-role">Software Engineer &middot; Navi Mumbai, India</p>
+                </div>
+                <span class="timeline-date">Aug 2019 — Aug 2021</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Developed claim approval workflow in React and <strong>Spring Boot</strong>, handling <em class="metric">30K+ daily claims</em> for 500+ insurance agents</li>
+                <li>Added <strong>Redis</strong> caching to claim APIs, <em class="metric">cutting page load times by 60%</em> across 500+ daily active users</li>
+                <li>Replaced manual log searching with centralized Splunk/CloudWatch logging, cutting MTTR <em class="metric">from 6 hours to 45 minutes</em></li>
+                <li>Built optimized <strong>PostgreSQL</strong> analytics APIs, reducing load time <em class="metric">from 2 minutes to 5 seconds</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="section-inner">
+        <h2 class="section-heading reveal">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Cloud-Native Platform -->
+          <div class="project-card reveal">
+            <h3 class="project-name">Cloud-Native User Management Platform</h3>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">AWS</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Packer</span>
+            </div>
+            <p class="project-desc">User onboarding platform with multi-AZ failover, auto-scaling, serverless email verification, and fully automated CI/CD achieving zero-downtime deployments across availability zones.</p>
+            <a href="https://github.com/orgs/CSYE-6225-Cloud-Computing-Sarvesh/repositories" class="project-link" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+
+          <!-- Language Learning Agent -->
+          <div class="project-card reveal" data-delay="150">
+            <h3 class="project-name">Language-Learning AI Agent</h3>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">MCP</span>
+              <span class="tag">spaCy</span>
+            </div>
+            <p class="project-desc">ReAct-based agentic workflow that autonomously filters, translates, and generates Anki flashcard decks using local open-source models.</p>
+            <a href="https://github.com/sarvesh-gaurishankar-sawant/language-learning-agent" class="project-link" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+
+          <!-- Team Progress Tracker -->
+          <div class="project-card reveal" data-delay="300">
+            <h3 class="project-name">Team Progress Tracker</h3>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Redux</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+            <p class="project-desc">Kanban board app with drag-and-drop task management, role-based access control, team collaboration, task analytics with completion rates and bottleneck detection, and i18n support for 130+ languages.</p>
+            <a href="https://github.com/sarvesh-gaurishankar-sawant/team-progress-tracker" class="project-link" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="section-inner">
+        <h2 class="section-heading reveal">Technical Skills</h2>
+
+        <div class="skills-container reveal">
+          <div class="skill-row">
+            <span class="skill-category">Languages</span>
+            <span class="skill-list">Java &middot; JavaScript &middot; TypeScript &middot; Python &middot; SQL &middot; HTML5 &middot; CSS3</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Frameworks</span>
+            <span class="skill-list">Spring Boot &middot; Spring Cloud &middot; Spring Security &middot; Spring Data JPA &middot; Hibernate &middot; React &middot; Redux &middot; Node.js &middot; Express.js &middot; Tailwind CSS</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Cloud / DevOps</span>
+            <span class="skill-list">AWS (EC2, S3, RDS, Lambda, CloudWatch, SNS, ECR, EKS, ElastiCache, ALB) &middot; Docker &middot; Kubernetes &middot; Terraform &middot; Packer &middot; Jenkins &middot; GitHub Actions</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Data / Tools</span>
+            <span class="skill-list">MySQL &middot; PostgreSQL &middot; MongoDB &middot; Redis &middot; Kafka &middot; GraphQL &middot; Swagger &middot; Maven &middot; Git &middot; JUnit &middot; Mockito &middot; SonarQube &middot; JIRA</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">AI / ML</span>
+            <span class="skill-list">LangGraph &middot; Ollama &middot; MCP &middot; spaCy &middot; Claude Code</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">Security / Monitoring</span>
+            <span class="skill-list">OAuth 2.0 &middot; JWT &middot; REST APIs &middot; WebSocket &middot; Resilience4j &middot; Splunk &middot; Log4j2</span>
+          </div>
+        </div>
+
+        <div class="certification reveal">
+          <a href="https://www.credly.com/badges/a5c9046f-af3b-44a5-aa54-ca8bb7d46f37/public_url" class="cert-link" target="_blank" rel="noopener noreferrer">
+            <span class="cert-badge">AWS</span>
+            <span>Certified Solutions Architect — Associate</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education" id="education">
+      <div class="section-inner">
+        <h2 class="section-heading reveal">Education</h2>
+
+        <div class="education-card reveal">
+          <h3 class="edu-degree">Master of Science in Software Engineering Systems</h3>
+          <p class="edu-school">Northeastern University, USA</p>
+          <div class="edu-meta">
+            <span class="edu-date">Dec 2025</span>
+            <span class="edu-gpa">GPA: 3.8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="section-inner">
+        <h2 class="section-heading reveal">Let's Connect</h2>
+
+        <div class="contact-links reveal">
+          <a href="mailto:mailsarveshsawant@gmail.com" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">mailsarveshsawant@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sarveshgsawant/" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/sarveshgsawant</span>
+          </a>
+          <a href="https://github.com/sarvesh-gaurishankar-sawant" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/sarvesh-gaurishankar-sawant</span>
+          </a>
+          <a href="assets/Sarvesh_Sawant_Resume.pdf" class="contact-item" download>
+            <span class="contact-label">Resume</span>
+            <span class="contact-value">Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Sarvesh Gaurishankar Sawant</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

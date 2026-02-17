@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake
+% % License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{etoolbox}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\tolerance=1000
+\emergencystretch=3em
+\hbadness=1000
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \textbf{#1} \hfill #2
+    \ifstrempty{#3}{}{\\ \textit{\small#3} \hfill \textit{\small #4}}
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeExpHeading}[4]{
+  \vspace{-2pt}\item
+    \textbf{#1}, #2, #3 \hfill #4
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \textit{\small#1} \hfill \textit{\small #2}
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \small#1 \hfill #2
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\sloppy
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\LARGE \scshape Sarvesh Gaurishankar Sawant} \\ \vspace{1pt}
+    \small \href{https://www.credly.com/badges/a5c9046f-af3b-44a5-aa54-ca8bb7d46f37/public_url}{\underline{AWS Certified Solutions Architect -- Associate}} | 857-398-5019 | \href{mailto:mailsarveshsawant@gmail.com}{\underline{mailsarveshsawant@gmail.com}} | \href{https://www.linkedin.com/in/sarveshgsawant/}{\underline{linkedin.com/in/sarveshgsawant}} | \href{https://github.com/sarvesh-gaurishankar-sawant}{\underline{github.com/sarvesh-gaurishankar-sawant}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeExpHeading
+      {Software Engineer Co-op}{Philips}{Cambridge, USA}{Jan 2025 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Built GraphQL and REST APIs in \textbf{Spring Boot} with \textbf{Hibernate} and MySQL for an ICU vital signs dashboard, serving real-time patient heart rate, BP, and SpO2 data to bedside monitors with \textbf{95\% unit test coverage}}
+        \resumeItem{Diagnosed and fixed a \textbf{JVM thread leak} via heap dump analysis that caused recurring OOM crashes in production, \textbf{reducing critical defects by 30\%} and eliminating unplanned service restarts}
+        \resumeItem{Implemented \textbf{Spring Security OAuth 2.0} with \textbf{JWT} validation and role-based access (doctor, nurse, admin tiers) for patient data APIs, enforcing \textbf{endpoint-level authorization} to support HIPAA audit requirements}
+        \resumeItem{Set up test infrastructure and wrote unit and integration tests using \textbf{JUnit, Mockito}, and React Testing Library, raising module-level coverage \textbf{from 60\% to 95\%} across backend and frontend services}
+      \resumeItemListEnd
+
+    \resumeExpHeading
+      {Senior Software Engineer}{LTIMindtree}{Navi Mumbai, India}{Sep 2021 -- Mar 2023}
+      \resumeItemListStart
+        \resumeItem{Built a greenfield credit scoring platform with React frontend and 4 \textbf{Spring Boot microservices} deployed on EKS, processing \textbf{50K+ daily} loan scoring transactions in real time}
+        \resumeItem{Designed high-availability microservice layer using \textbf{Spring Cloud Gateway} and \textbf{Resilience4j} circuit breakers across 4 EKS-deployed services, achieving \textbf{99.9\% uptime}}
+        \resumeItem{Replaced manual page refreshes with \textbf{Kafka} event streaming and \textbf{WebSocket} push to the React UI, delivering live credit score updates \textbf{in under 1s}}
+        \resumeItem{Extended existing \textbf{CI/CD pipeline} in \textbf{Jenkins} with \textbf{Docker} image builds, SonarQube quality gates, and automated pushes to ECR, enabling \textbf{zero-downtime rollouts} to EKS clusters}
+      \resumeItemListEnd
+
+    \resumeExpHeading
+      {Software Engineer}{LTIMindtree}{Navi Mumbai, India}{Aug 2019 -- Aug 2021}
+      \resumeItemListStart
+        \resumeItem{Developed the claim approval workflow in React and \textbf{Spring Boot RESTful APIs} deployed on AWS via Docker, handling approve/reject/escalate logic for 500+ insurance agents processing \textbf{30K+ claims daily}}
+        \resumeItem{Added \textbf{Redis} (ElastiCache) caching to the claim detail and status lookup APIs, \textbf{cutting page load times by 60\%} across 500+ daily active users}
+        \resumeItem{Replaced manual server log searching with centralized logging using Log4j2, Splunk, and CloudWatch dashboards with custom alerts, cutting mean time to resolution \textbf{from 6 hours to 45 minutes}}
+        \resumeItem{Engineered paginated claim analytics APIs using \textbf{Spring Data Hibernate} with optimized \textbf{PostgreSQL} queries on RDS, replacing manual SQL report runs and reducing load time \textbf{from 2 minutes to 5 seconds} for 500+ users}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Cloud-Native User Management Platform} | \emph{Java, Spring Boot, Terraform, AWS (EC2, RDS, S3, Lambda, ALB, CloudWatch), GitHub Actions, Packer}}{\href{https://github.com/orgs/CSYE-6225-Cloud-Computing-Sarvesh/repositories}{\underline{GitHub}}}
+          \begin{itemize}[leftmargin=0.0in, label={}]
+            \item\small{Built a user onboarding platform with multi-AZ failover, auto-scaling, serverless email verification, and fully automated CI/CD achieving zero-downtime deployments across availability zones}
+          \end{itemize}\vspace{-12pt}
+      \resumeProjectHeading
+          {\textbf{Language-Learning AI Agent} | \emph{Python, LangGraph, Ollama, MCP, spaCy}}{\href{https://github.com/sarvesh-gaurishankar-sawant/language-learning-agent}{\underline{GitHub}}}
+          \begin{itemize}[leftmargin=0.0in, label={}]
+            \item\small{ReAct-based agentic workflow that autonomously filters, translates, and generates Anki flashcard decks using local open-source models}
+          \end{itemize}\vspace{-12pt}
+      \resumeProjectHeading
+          {\textbf{Team Progress Tracker} | \emph{React, Redux, TypeScript, Node.js, Express.js, MongoDB, Tailwind CSS}}{\href{https://github.com/sarvesh-gaurishankar-sawant/team-progress-tracker}{\underline{GitHub}}}
+          \begin{itemize}[leftmargin=0.0in, label={}]
+            \item\small{Kanban board app with drag-and-drop task management, role-based access control, team collaboration, task analytics with completion rates and bottleneck detection, and i18n support for 130+ languages}
+          \end{itemize}\vspace{-5pt}
+    \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+
+ \begin{itemize}[leftmargin=0.15in, label={}]
+
+    \small{\item{
+
+     \textbf{Languages}{:} Java, JavaScript, TypeScript, Python, SQL, HTML5, CSS3 \\
+     \textbf{Frameworks}{:} Spring Boot, Spring Cloud, Spring Security, Spring Data JPA, Hibernate, React, Redux, Node.js, Express.js, Tailwind CSS \\
+     \textbf{Cloud/DevOps}{:} AWS (EC2, S3, RDS, Lambda, CloudWatch, SNS, ECR, EKS, ElastiCache, ALB), Docker, Kubernetes, Terraform, Packer, Jenkins, GitHub~Actions \\
+     \textbf{Data/Tools}{:} MySQL, PostgreSQL, MongoDB, Redis, Kafka, GraphQL, Swagger, Maven, Git, JUnit, Mockito, SonarQube, JIRA \\
+     \textbf{AI/ML}{:} LangGraph, Ollama, MCP, spaCy, Claude Code \\
+     \textbf{Security/Monitoring}{:} OAuth 2.0, JWT, Agile, REST APIs, WebSocket, Resilience4j, Splunk, Log4j2
+
+    }}
+
+ \end{itemize}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Master of Science in Software Engineering Systems}{Dec 2025}
+      {Northeastern University, USA}{GPA: 3.8}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
+
+
+
