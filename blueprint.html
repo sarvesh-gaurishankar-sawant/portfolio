@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarvesh Sawant — Software Engineer [Blueprint]</title>
+  <meta name="description" content="Software Engineer specializing in Java, Spring Boot, AWS, and cloud-native systems.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sarvesh Sawant — Software Engineer">
+  <meta property="og:description" content="Software Engineer specializing in Java, Spring Boot, AWS, and cloud-native systems.">
+  <meta property="og:url" content="https://sarveshsawant.com/blueprint.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sarveshsawant.com/og-image-blueprint.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sarvesh Sawant — Software Engineer · Blueprint edition">
+  <meta property="og:site_name" content="Sarvesh Sawant">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sarvesh Sawant — Software Engineer">
+  <meta name="twitter:description" content="Software Engineer specializing in Java, Spring Boot, AWS, and cloud-native systems.">
+  <meta name="twitter:image" content="https://sarveshsawant.com/og-image-blueprint.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg-elevated: #0f1422;
+      --bg-subtle: #131a2a;
+      --text: #e6edf3;
+      --text-muted: #8b96aa;
+      --text-dim: #5a6478;
+      --accent: #22d3ee;
+      --accent-dim: rgba(34, 211, 238, 0.12);
+      --border: #1e2a3f;
+      --border-strong: #2a3a55;
+      --grid-minor: rgba(34, 211, 238, 0.04);
+      --grid-major: rgba(34, 211, 238, 0.08);
+
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --max-w: 1180px;
+      --pad-x: clamp(1.25rem, 4vw, 3rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+
+      /* Blueprint grid */
+      background-image:
+        linear-gradient(var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px),
+        linear-gradient(var(--grid-major) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-major) 1px, transparent 1px);
+      background-size: 24px 24px, 24px 24px, 96px 96px, 96px 96px;
+      background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 50% 0%, transparent 0%, var(--bg) 80%),
+        radial-gradient(ellipse at 50% 100%, transparent 30%, var(--bg) 90%);
+      z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(10, 14, 26, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1rem var(--pad-x);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-mark {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+    .nav-mark::before {
+      content: '◇ ';
+      opacity: 0.6;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-transform: lowercase;
+      transition: color 150ms ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a::before { content: '/ '; color: var(--text-dim); }
+
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    /* ---------- LAYOUT ---------- */
+    main { position: relative; z-index: 1; }
+
+    .section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 6rem var(--pad-x) 4rem;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .section-label .sec-num {
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-family: var(--font-mono);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 3rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 9rem var(--pad-x) 5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-meta {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .hero-meta .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      box-shadow: 0 0 12px var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .hero-name {
+      font-family: var(--font-mono);
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+    .hero-name .ampersand {
+      color: var(--accent);
+      font-weight: 400;
+    }
+    .hero-tagline {
+      font-family: var(--font-mono);
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+    .hero-tagline .sep { color: var(--text-dim); margin: 0 0.6rem; }
+    .hero-intro {
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      max-width: 700px;
+    }
+    .hero-stat {
+      background: var(--bg);
+      padding: 1rem 1.25rem;
+    }
+    .hero-stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .hero-stat-value {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .hero-stat-value .accent { color: var(--accent); }
+
+    /* ---------- CARDS w/ CORNER BRACKETS ---------- */
+    .blueprint-card {
+      position: relative;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 2rem;
+    }
+    .blueprint-card::before,
+    .blueprint-card::after {
+      content: '';
+      position: absolute;
+      width: 14px; height: 14px;
+      border: 1px solid var(--accent);
+      pointer-events: none;
+    }
+    .blueprint-card::before {
+      top: -1px; left: -1px;
+      border-right: none; border-bottom: none;
+    }
+    .blueprint-card::after {
+      bottom: -1px; right: -1px;
+      border-left: none; border-top: none;
+    }
+
+    /* ---------- EXPERIENCE ---------- */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .exp-card { padding: 2rem 2.25rem; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px dashed var(--border-strong);
+    }
+    .exp-id {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .exp-id .status {
+      color: var(--accent);
+      margin-left: 0.5rem;
+    }
+    .exp-company {
+      font-family: var(--font-mono);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .exp-role {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .exp-role .sep { color: var(--text-dim); margin: 0 0.4rem; }
+    .exp-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+    .exp-prose {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .exp-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .skill-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-right: 0.5rem;
+    }
+    .chip {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      transition: all 150ms ease;
+    }
+    .chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .projects-grid .blueprint-card:first-child {
+      grid-column: 1 / -1;
+    }
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+    .project-id {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .project-id .num { color: var(--accent); }
+    .project-name {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.005em;
+    }
+    .project-desc {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent-dim);
+      padding-bottom: 2px;
+      transition: border-color 150ms ease;
+    }
+    .project-link:hover { border-color: var(--accent); }
+    .project-link::after { content: ' →'; }
+
+    /* ---------- SKILLS (key-value spec sheet) ---------- */
+    .spec-sheet {
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+    .spec-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px dashed var(--border);
+      align-items: baseline;
+    }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .spec-key::before {
+      content: '> ';
+      color: var(--accent);
+    }
+    .spec-value {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .spec-value .div { color: var(--text-dim); margin: 0 0.4rem; }
+    .spec-value .hi { color: var(--text); }
+
+    @media (max-width: 640px) {
+      .spec-row { grid-template-columns: 1fr; gap: 0.4rem; }
+    }
+
+    .cert {
+      margin-top: 2rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid var(--accent-dim);
+      background: var(--accent-dim);
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+    .cert-tag {
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+    .cert::before {
+      content: '[ CERT ]';
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- EDUCATION ---------- */
+    .edu-card {
+      max-width: 720px;
+    }
+    .edu-degree {
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .edu-school {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .edu-meta {
+      display: flex;
+      gap: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .edu-meta .hi { color: var(--accent); }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .contact-item {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      transition: all 200ms ease;
+      position: relative;
+    }
+    .contact-item:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .contact-key {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .contact-key::before {
+      content: '◆ ';
+      color: var(--accent);
+    }
+    .contact-value {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--text);
+      word-break: break-all;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      max-width: var(--max-w);
+      margin: 4rem auto 0;
+      padding: 2rem var(--pad-x);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+    .footer .build {
+      color: var(--text-muted);
+    }
+    .footer .build .accent { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-mark">SS / portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <p class="hero-meta"><span class="dot"></span>AVAILABLE FOR FULL-TIME &mdash; BOSTON, MA</p>
+      <h1 class="hero-name">Sarvesh<br><span class="ampersand">&rarr;</span> Sawant</h1>
+      <p class="hero-tagline">software_engineer<span class="sep">//</span>aws_solutions_architect<span class="sep">//</span>ms_northeastern</p>
+      <p class="hero-intro">
+        I engineer resilient backend systems and cloud infrastructure with Java, Spring Boot, and AWS &mdash; spanning microservices, Kafka event streaming, Kubernetes orchestration, and Terraform-managed deployments. I focus on the systems people depend on.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-label">Years</div>
+          <div class="hero-stat-value"><span class="accent">5+</span> shipping</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Stack</div>
+          <div class="hero-stat-value">Java <span class="accent">/</span> AWS</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Cert</div>
+          <div class="hero-stat-value">AWS <span class="accent">SAA-C03</span></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Location</div>
+          <div class="hero-stat-value">Boston <span class="accent">/</span> Remote</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-label"><span class="sec-num">[01]</span> work_history</div>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="timeline">
+
+        <article class="blueprint-card exp-card">
+          <div class="exp-id">REC_001<span class="status">// SHIPPED</span></div>
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company">Philips</h3>
+              <p class="exp-role">Software Engineer<span class="sep">//</span>Internship<span class="sep">//</span>Cambridge, MA<span class="sep">//</span>On-site</p>
+            </div>
+            <span class="exp-date">2025.01 &rarr; 2025.08 &middot; 8 mos</span>
+          </div>
+          <p class="exp-prose">
+            Worked on a clinical-grade patient monitoring platform used across hospital environments. Unified clinician login across patient and billing services so staff could sign in once and move between systems without re-authenticating. Cleared a backlog on the patient lifecycle event pipeline that had been pushing alarm processing past the hospital's 60-second SLA, restoring on-time delivery during peak load. Cut latency on the alarm delivery path after dashboards flagged a slow service call as the bottleneck. Shipped into a regulated environment in close collaboration with QA and clinical engineering.
+          </p>
+          <div class="exp-skills">
+            <span class="skill-label">stack</span>
+            <span class="chip">GraphQL</span>
+            <span class="chip">Spring Security</span>
+            <span class="chip">Spring Cloud Gateway</span>
+            <span class="chip">Kafka</span>
+            <span class="chip">gRPC</span>
+          </div>
+        </article>
+
+        <article class="blueprint-card exp-card">
+          <div class="exp-id">REC_002<span class="status">// SHIPPED</span></div>
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company">LTIMindtree</h3>
+              <p class="exp-role">Senior Software Engineer<span class="sep">//</span>Full-time<span class="sep">//</span>Navi Mumbai, India</p>
+            </div>
+            <span class="exp-date">2019.09 &rarr; 2023.03 &middot; 3 yrs 7 mos</span>
+          </div>
+          <p class="exp-prose">
+            Built and scaled a B2B integration platform handling mission-critical EDI traffic with trading partners. Expanded protocol coverage beyond AS2 to SFTP and FTPS, unlocking onboarding for partners the previous system couldn't support. Shipped a self-service dashboard that let operations teams monitor transactions, inspect messages, and retry failures on their own, removing developers from routine incidents. Hardened the messaging layer against partner traffic spikes and eliminated the silent message loss that had been causing disputes. Tightened infrastructure by scoping per-service permissions across environments, shrinking container images by ~85% to speed deployments, and replacing fixed server counts with autoscaling. Brought CI/CD under version control and added proactive alerting that caught failures before partners noticed.
+          </p>
+          <div class="exp-skills">
+            <span class="skill-label">stack</span>
+            <span class="chip">Spring Cloud Gateway</span>
+            <span class="chip">Resilience4j</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">RabbitMQ</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">Jenkins</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-label"><span class="sec-num">[02]</span> selected_work</div>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+
+        <article class="blueprint-card">
+          <div class="project-id">PROJ <span class="num">/01</span></div>
+          <h3 class="project-name">Cloud-Native User Management Platform</h3>
+          <p class="project-desc">User onboarding platform with multi-AZ failover, auto-scaling, serverless email verification, and fully automated CI/CD achieving zero-downtime deployments across availability zones.</p>
+          <div class="project-tags">
+            <span class="chip">Java</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">AWS</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">Packer</span>
+          </div>
+          <a href="https://github.com/orgs/CSYE-6225-Cloud-Computing-Sarvesh/repositories" class="project-link" target="_blank" rel="noopener noreferrer">view source</a>
+        </article>
+
+        <article class="blueprint-card">
+          <div class="project-id">PROJ <span class="num">/02</span></div>
+          <h3 class="project-name">Language-Learning AI Agent</h3>
+          <p class="project-desc">ReAct-based agentic workflow that autonomously filters, translates, and generates Anki flashcard decks using local open-source models.</p>
+          <div class="project-tags">
+            <span class="chip">Python</span>
+            <span class="chip">LangGraph</span>
+            <span class="chip">Ollama</span>
+            <span class="chip">MCP</span>
+            <span class="chip">spaCy</span>
+          </div>
+          <a href="https://github.com/sarvesh-gaurishankar-sawant/language-learning-agent" class="project-link" target="_blank" rel="noopener noreferrer">view source</a>
+        </article>
+
+        <article class="blueprint-card">
+          <div class="project-id">PROJ <span class="num">/03</span></div>
+          <h3 class="project-name">Team Progress Tracker</h3>
+          <p class="project-desc">Kanban board app with drag-and-drop task management, role-based access control, team collaboration, task analytics with completion rates and bottleneck detection, and i18n support for 130+ languages.</p>
+          <div class="project-tags">
+            <span class="chip">React</span>
+            <span class="chip">Redux</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Express.js</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Tailwind CSS</span>
+          </div>
+          <a href="https://github.com/sarvesh-gaurishankar-sawant/team-progress-tracker" class="project-link" target="_blank" rel="noopener noreferrer">view source</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-label"><span class="sec-num">[03]</span> tech_stack</div>
+      <h2 class="section-title">Technical Specifications</h2>
+
+      <div class="spec-sheet">
+        <div class="spec-row">
+          <span class="spec-key">languages</span>
+          <span class="spec-value"><span class="hi">Java</span><span class="div">&middot;</span>JavaScript<span class="div">&middot;</span>TypeScript<span class="div">&middot;</span>Python<span class="div">&middot;</span>SQL<span class="div">&middot;</span>HTML5<span class="div">&middot;</span>CSS3</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">frameworks</span>
+          <span class="spec-value"><span class="hi">Spring Boot</span><span class="div">&middot;</span>Spring Cloud<span class="div">&middot;</span>Spring Security<span class="div">&middot;</span>Spring Data JPA<span class="div">&middot;</span>Hibernate<span class="div">&middot;</span>React<span class="div">&middot;</span>Redux<span class="div">&middot;</span>Node.js<span class="div">&middot;</span>Express.js<span class="div">&middot;</span>Tailwind CSS</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">cloud / devops</span>
+          <span class="spec-value"><span class="hi">AWS</span> (EC2, S3, RDS, Lambda, CloudWatch, SNS, ECR, EKS, ElastiCache, ALB)<span class="div">&middot;</span>Docker<span class="div">&middot;</span>Kubernetes<span class="div">&middot;</span>Terraform<span class="div">&middot;</span>Packer<span class="div">&middot;</span>Jenkins<span class="div">&middot;</span>GitHub Actions</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">data / tools</span>
+          <span class="spec-value">MySQL<span class="div">&middot;</span>PostgreSQL<span class="div">&middot;</span>MongoDB<span class="div">&middot;</span>Redis<span class="div">&middot;</span><span class="hi">Kafka</span><span class="div">&middot;</span>GraphQL<span class="div">&middot;</span>Swagger<span class="div">&middot;</span>Maven<span class="div">&middot;</span>Git<span class="div">&middot;</span>JUnit<span class="div">&middot;</span>Mockito<span class="div">&middot;</span>SonarQube<span class="div">&middot;</span>JIRA</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">ai / ml</span>
+          <span class="spec-value">LangGraph<span class="div">&middot;</span>Ollama<span class="div">&middot;</span>MCP<span class="div">&middot;</span>spaCy<span class="div">&middot;</span>Claude Code</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">security / monitoring</span>
+          <span class="spec-value">OAuth 2.0<span class="div">&middot;</span>JWT<span class="div">&middot;</span>REST APIs<span class="div">&middot;</span>WebSocket<span class="div">&middot;</span>Resilience4j<span class="div">&middot;</span>Splunk<span class="div">&middot;</span>Log4j2</span>
+        </div>
+      </div>
+
+      <a href="https://www.credly.com/badges/a5c9046f-af3b-44a5-aa54-ca8bb7d46f37/public_url" class="cert" target="_blank" rel="noopener noreferrer">
+        <span class="cert-tag">AWS</span>
+        <span>Certified Solutions Architect &mdash; Associate</span>
+      </a>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="section-label"><span class="sec-num">[04]</span> education</div>
+      <h2 class="section-title">Education</h2>
+
+      <article class="blueprint-card edu-card">
+        <h3 class="edu-degree">M.S. Software Engineering Systems</h3>
+        <p class="edu-school">Northeastern University, Boston, MA</p>
+        <div class="edu-meta">
+          <span><span class="hi">grad:</span> Dec 2025</span>
+          <span><span class="hi">gpa:</span> 3.8 / 4.0</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-label"><span class="sec-num">[05]</span> reach_out</div>
+      <h2 class="section-title">Let's Connect</h2>
+
+      <div class="contact-grid">
+        <a href="mailto:mailsarveshsawant@gmail.com" class="contact-item">
+          <div class="contact-key">email</div>
+          <div class="contact-value">mailsarveshsawant@gmail.com</div>
+        </a>
+        <a href="https://www.linkedin.com/in/sarveshgsawant/" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <div class="contact-key">linkedin</div>
+          <div class="contact-value">linkedin.com/in/sarveshgsawant</div>
+        </a>
+        <a href="https://github.com/sarvesh-gaurishankar-sawant" class="contact-item" target="_blank" rel="noopener noreferrer">
+          <div class="contact-key">github</div>
+          <div class="contact-value">github.com/sarvesh-gaurishankar-sawant</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="build">&copy; 2026 sarvesh sawant<span style="color:var(--text-dim)"> // </span><span class="accent">v2.0-blueprint</span></div>
+    <div>built with html<span style="color:var(--text-dim)"> &middot; </span>css<span style="color:var(--text-dim)"> &middot; </span>jetbrains mono</div>
+  </footer>
+
+</body>
+</html>
