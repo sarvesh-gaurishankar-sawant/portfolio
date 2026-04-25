@@ -100,56 +100,48 @@
               <div class="timeline-header">
                 <div>
                   <h3 class="timeline-company">Philips</h3>
-                  <p class="timeline-role">Software Engineer Co-op &middot; Cambridge, USA</p>
+                  <p class="timeline-role">Software Engineer &middot; Internship &middot; Cambridge, Massachusetts &middot; On-site</p>
                 </div>
-                <span class="timeline-date">Jan 2025 — Aug 2025</span>
+                <span class="timeline-date">Jan 2025 — Aug 2025 &middot; 8 mos</span>
               </div>
-              <ul class="timeline-list">
-                <li>Built GraphQL and REST APIs in <strong>Spring Boot</strong> with <strong>Hibernate</strong> and MySQL for an ICU vital signs dashboard, serving real-time patient data with <em class="metric">95% unit test coverage</em></li>
-                <li>Diagnosed and fixed a <strong>JVM thread leak</strong> via heap dump analysis, <em class="metric">reducing critical defects by 30%</em> and eliminating unplanned service restarts</li>
-                <li>Implemented <strong>Spring Security OAuth 2.0</strong> with <strong>JWT</strong> validation and role-based access for patient data APIs, supporting HIPAA audit requirements</li>
-                <li>Set up test infrastructure using <strong>JUnit, Mockito</strong>, and React Testing Library, raising coverage <em class="metric">from 60% to 95%</em> across services</li>
-              </ul>
+              <p class="timeline-prose">
+                Worked on a clinical-grade patient monitoring platform used across hospital environments. Unified clinician login across patient and billing services so staff could sign in once and move between systems without re-authenticating. Cleared a backlog on the patient lifecycle event pipeline that had been pushing alarm processing past the hospital's 60-second SLA, restoring on-time delivery during peak load. Cut latency on the alarm delivery path after dashboards flagged a slow service call as the bottleneck. Shipped into a regulated environment in close collaboration with QA and clinical engineering.
+              </p>
+              <div class="timeline-skills">
+                <span class="timeline-skills-label">Skills</span>
+                <span class="tag">GraphQL</span>
+                <span class="tag">Spring Security</span>
+                <span class="tag">Spring Cloud Gateway</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">gRPC</span>
+              </div>
             </div>
           </div>
 
-          <!-- LTIMindtree Senior -->
+          <!-- LTIMindtree -->
           <div class="timeline-item reveal" data-delay="150">
             <div class="timeline-marker"></div>
             <div class="timeline-card">
               <div class="timeline-header">
                 <div>
                   <h3 class="timeline-company">LTIMindtree</h3>
-                  <p class="timeline-role">Senior Software Engineer &middot; Navi Mumbai, India</p>
+                  <p class="timeline-role">Senior Software Engineer &middot; Full-time &middot; Navi Mumbai, Maharashtra, India</p>
                 </div>
-                <span class="timeline-date">Sep 2021 — Mar 2023</span>
+                <span class="timeline-date">Sep 2019 — Mar 2023 &middot; 3 yrs 7 mos</span>
               </div>
-              <ul class="timeline-list">
-                <li>Built a greenfield credit scoring platform with React frontend and 4 <strong>Spring Boot microservices</strong> on EKS, processing <em class="metric">50K+ daily</em> transactions</li>
-                <li>Designed high-availability layer using <strong>Spring Cloud Gateway</strong> and <strong>Resilience4j</strong> circuit breakers, achieving <em class="metric">99.9% uptime</em></li>
-                <li>Replaced manual refreshes with <strong>Kafka</strong> event streaming and <strong>WebSocket</strong> push, delivering live credit score updates <em class="metric">in under 1s</em></li>
-                <li>Extended <strong>CI/CD pipeline</strong> in Jenkins with <strong>Docker</strong>, SonarQube gates, and ECR pushes for <em class="metric">zero-downtime rollouts</em></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- LTIMindtree -->
-          <div class="timeline-item reveal" data-delay="300">
-            <div class="timeline-marker"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-company">LTIMindtree</h3>
-                  <p class="timeline-role">Software Engineer &middot; Navi Mumbai, India</p>
-                </div>
-                <span class="timeline-date">Aug 2019 — Aug 2021</span>
+              <p class="timeline-prose">
+                Built and scaled a B2B integration platform handling mission-critical EDI traffic with trading partners. Expanded protocol coverage beyond AS2 to SFTP and FTPS, unlocking onboarding for partners the previous system couldn't support. Shipped a self-service dashboard that let operations teams monitor transactions, inspect messages, and retry failures on their own, removing developers from routine incidents. Hardened the messaging layer against partner traffic spikes and eliminated the silent message loss that had been causing disputes. Tightened infrastructure by scoping per-service permissions across environments, shrinking container images by ~85% to speed deployments, and replacing fixed server counts with autoscaling. Brought CI/CD under version control and added proactive alerting that caught failures before partners noticed.
+              </p>
+              <div class="timeline-skills">
+                <span class="timeline-skills-label">Skills</span>
+                <span class="tag">Spring Cloud Gateway</span>
+                <span class="tag">Resilience4j</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">RabbitMQ</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Jenkins</span>
               </div>
-              <ul class="timeline-list">
-                <li>Developed claim approval workflow in React and <strong>Spring Boot</strong>, handling <em class="metric">30K+ daily claims</em> for 500+ insurance agents</li>
-                <li>Added <strong>Redis</strong> caching to claim APIs, <em class="metric">cutting page load times by 60%</em> across 500+ daily active users</li>
-                <li>Replaced manual log searching with centralized Splunk/CloudWatch logging, cutting MTTR <em class="metric">from 6 hours to 45 minutes</em></li>
-                <li>Built optimized <strong>PostgreSQL</strong> analytics APIs, reducing load time <em class="metric">from 2 minutes to 5 seconds</em></li>
-              </ul>
             </div>
           </div>
         </div>
