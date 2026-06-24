@@ -745,10 +745,10 @@
         <span class="accent">Sawant.</span>
       </h1>
       <p class="hero-tagline">
-        Backend &amp; Cloud<span class="sep">/</span>Java &middot; Spring &middot; AWS<span class="sep">/</span>MS Northeastern
+        Full Stack Developer<span class="sep">/</span>Java &middot; Spring &middot; React &middot; AWS<span class="sep">/</span>MS Northeastern
       </p>
       <p class="hero-intro">
-        I engineer <b>resilient backend systems and cloud infrastructure</b> with Java, Spring Boot, and AWS — spanning microservices, Kafka event streaming, Kubernetes orchestration, and Terraform-managed deployments. I focus on the systems people depend on.
+        I build <b>cloud-native full-stack applications and microservices</b> with Java, Spring Boot, React, and Node.js on AWS — from scalable APIs and event-driven backends to Retrieval-Augmented Generation and vector search. I focus on the systems people depend on.
       </p>
       <div class="hero-ctas">
         <a href="#contact" class="pop-btn">Get in touch &rarr;</a>
@@ -769,21 +769,48 @@
         <article class="exp-card">
           <div class="exp-header">
             <div>
+              <h3 class="exp-company">Liberty Mutual</h3>
+              <p class="exp-role">Full Stack Developer<span class="sep">//</span>USA</p>
+            </div>
+            <span class="exp-date">Apr 2026 → Present</span>
+          </div>
+          <p class="exp-prose">
+            Rebuilt insurance portals in React and Node.js, scaling capacity to ~2K concurrent user sessions through peak monthly premium-payment windows without a single timeout. Decoupled monolithic claims workflows into scalable Java and Spring Boot services, processing ~25K transactions daily with zero downtime. Profiled production execution paths and rewrote poorly indexed PostgreSQL queries, reclaiming ~3 hours of weekly manual verification for underwriting teams. Led the deployment of internal GenAI microservices across 3 engineering teams, containerizing open-source LLMs on AWS Fargate to isolate data. Built a Python pipeline that streams unstructured policy documentation into Amazon OpenSearch vector indexes to power Retrieval-Augmented Generation.
+          </p>
+          <div class="exp-skills">
+            <span class="skill-label">Stack</span>
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Java</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">AWS Fargate</span>
+            <span class="chip">Amazon OpenSearch</span>
+            <span class="chip">Python</span>
+          </div>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
               <h3 class="exp-company">Philips</h3>
-              <p class="exp-role">Software Engineer<span class="sep">//</span>Internship<span class="sep">//</span>Cambridge, MA</p>
+              <p class="exp-role">SDET<span class="sep">//</span>USA</p>
             </div>
             <span class="exp-date">Jan 2025 → Aug 2025</span>
           </div>
           <p class="exp-prose">
-            Worked on a clinical-grade patient monitoring platform used across hospital environments. Unified clinician login across patient and billing services so staff could sign in once and move between systems without re-authenticating. Cleared a backlog on the patient lifecycle event pipeline that had been pushing alarm processing past the hospital's 60-second SLA, restoring on-time delivery during peak load. Cut latency on the alarm delivery path after dashboards flagged a slow service call as the bottleneck. Shipped into a regulated environment in close collaboration with QA and clinical engineering.
+            Built internal test-monitoring dashboards in JavaScript and Angular to track telemetry health, device connectivity, and validation status across 40+ bedside monitoring systems. Automated deployment and regression validation with Jenkins CI and Docker within healthcare releases, cutting ~9 engineering hours of manual validation monthly. Analyzed packet-level communication with Wireshark and TCP/IP inspection to validate alarm propagation across 120+ connected telemetry endpoints. Validated wireless roaming and AP failover on IntelliVue Smart-hopping 1.4 GHz WMTS via Azure DevOps across 50+ monitoring devices. Partnered with QA and infrastructure teams using Bash automation and Linux system-testing workflows.
           </p>
           <div class="exp-skills">
             <span class="skill-label">Stack</span>
-            <span class="chip">GraphQL</span>
-            <span class="chip">Spring Security</span>
-            <span class="chip">Spring Cloud Gateway</span>
-            <span class="chip">Kafka</span>
-            <span class="chip">gRPC</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Angular</span>
+            <span class="chip">Jenkins</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Wireshark</span>
+            <span class="chip">Azure DevOps</span>
+            <span class="chip">Bash</span>
+            <span class="chip">Linux</span>
           </div>
         </article>
 
@@ -793,20 +820,24 @@
               <h3 class="exp-company">LTIMindtree</h3>
               <p class="exp-role">Senior Software Engineer<span class="sep">//</span>Full-time<span class="sep">//</span>Navi Mumbai, India</p>
             </div>
-            <span class="exp-date">Sep 2019 → Mar 2023</span>
+            <span class="exp-date">Aug 2019 → Mar 2023</span>
           </div>
           <p class="exp-prose">
-            Built and scaled a B2B integration platform handling mission-critical EDI traffic with trading partners. Expanded protocol coverage beyond AS2 to SFTP and FTPS, unlocking onboarding for partners the previous system couldn't support. Shipped a self-service dashboard that let operations teams monitor transactions, inspect messages, and retry failures on their own, removing developers from routine incidents. Hardened the messaging layer against partner traffic spikes and eliminated the silent message loss that had been causing disputes. Tightened infrastructure by scoping per-service permissions across environments, shrinking container images by ~85% to speed deployments, and replacing fixed server counts with autoscaling. Brought CI/CD under version control and added proactive alerting that caught failures before partners noticed.
+            Architected a B2B EDI monitoring dashboard in React and TypeScript that instantly retriggered ~150 daily transaction failures, accelerating recovery. Engineered Kafka-driven event workers that invalidated stale Redis cache entries, eliminating ~50K unnecessary MySQL reads per day. Designed secure persistence layers with Spring Data JPA and OAuth 2.0 token-based authorization, cutting client integration onboarding by ~3 days. Enforced AWS IAM least-privilege across 12 production clusters by automating environment-scoped infrastructure on Kubernetes with Terraform. Shifted operations from reactive tickets to automated alerts across 15 core microservices with Prometheus, Grafana, and Alertmanager.
           </p>
           <div class="exp-skills">
             <span class="skill-label">Stack</span>
-            <span class="chip">Spring Cloud Gateway</span>
-            <span class="chip">Resilience4j</span>
-            <span class="chip">Spring Boot</span>
-            <span class="chip">RabbitMQ</span>
-            <span class="chip">Kubernetes</span>
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Apache Kafka</span>
+            <span class="chip">Redis</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Spring Data JPA</span>
+            <span class="chip">OAuth 2.0</span>
             <span class="chip">Terraform</span>
-            <span class="chip">Jenkins</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Prometheus</span>
+            <span class="chip">Grafana</span>
           </div>
         </article>
 
